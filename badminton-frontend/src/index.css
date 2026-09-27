@@ -1,0 +1,40 @@
+:root {
+  --bg: #EDF0E9;;
+  --court: #1F5C3F;
+  --court-dark: #123825;
+  --accent: #C6FF3D;
+  --ink: #16241C;
+  --line: #D8DED5;
+  --muted: #5C6B5F;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.5rem;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: var(--court);
+}

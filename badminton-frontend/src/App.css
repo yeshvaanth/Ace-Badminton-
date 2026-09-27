@@ -1,0 +1,265 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 3px solid var(--court);
+  background: var(--bg);
+}
+
+.navbar-logo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.navbar-links a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: var(--court);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.btn-outline:hover {
+  border-color: var(--court);
+  color: var(--court);
+}
+
+/* Page shell */
+.page {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.page-narrow {
+  max-width: 380px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.error-text {
+  color: #B3261E;
+  font-size: 0.9rem;
+}
+
+/* Court cards */
+.court-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.court-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--court);
+  padding: 1.25rem 1.5rem;
+}
+
+.court-card h3 {
+  font-size: 1.3rem;
+}
+
+.court-card p {
+  margin: 0.2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.court-price {
+  font-weight: 600;
+  color: var(--ink) !important;
+  margin-top: 0.5rem !important;
+}
+
+.btn-primary:disabled {
+  background: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+/* Forms */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-field input {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.form-field input:focus {
+  outline: 2px solid var(--court);
+  outline-offset: 1px;
+}
+
+/* Booking screen */
+.date-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.date-row input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.slot-btn.booked {
+  background: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
+  border-color: var(--line);
+}
+
+.slot-btn.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--court-dark);
+  font-weight: 600;
+}
+
+.duration-row {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-message {
+  font-size: 0.9rem;
+  padding: 0.6rem 0.9rem;
+  background: white;
+  border-left: 3px solid var(--court);
+  margin: 1rem 0;
+}
+
+/* My Bookings */
+.booking-item {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.booking-item p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.status-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+
+.status-pill.confirmed { background: var(--accent); color: var(--court-dark); }
+.status-pill.pending { background: #FDF0D5; color: #8A5A00; }
+.status-pill.cancelled { background: #F5D5D2; color: #B3261E; }
+
+/* Custom radio buttons */
+.duration-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.duration-row input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--muted);
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.duration-row input[type="radio"]:checked {
+  border-color: var(--court);
+}
+
+.duration-row input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--court);
+}
+
+/* Date input */
+.date-row input[type="date"] {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--court);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--court-dark);
+}
+
+.slot-btn {
+  padding: 0.65rem 0;
+  border: 1.5px solid var(--line);
+  background: white;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.slot-btn:not(.booked):not(.selected):hover {
+  border-color: var(--court);
+  color: var(--court);
+}
